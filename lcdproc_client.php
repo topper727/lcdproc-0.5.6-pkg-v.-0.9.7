@@ -513,7 +513,6 @@
 			1  = All gateway up  */
 		global $g;
 		global $config;
-		$a_gateways = return_gateways_array();
 		$gateways_status = array();
 		$gateways_status = return_gateways_status(true);
 		foreach ($a_gateways as $gname => $gateway)
@@ -791,7 +790,7 @@
 						$led_output_value = $led_output_value + pow(2, 5);
 				}
 				/* LED 3: CPU Usage */
-				if (cpu_usage() > 75)
+				if (cpu_usage() > 50)
 					{$led_output_value = $led_output_value + pow(2, 6);}
 				else
 					{$led_output_value = $led_output_value + pow(2, 2);}
